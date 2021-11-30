@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rr_principal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorGreen">
+
+
+    <TextView
+        android:id="@+id/configuracio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Configuració"
+        android:background="@color/colorBlack"
+        android:textColor="@color/colorRed"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <!--OPCIONS LLETRA/COLOR -->
+
+
+    <RadioGroup
+        android:id="@+id/rg_opcionsLletraColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/configuracio"
+        android:layout_marginLeft="20dp"
+        android:background="@color/colorGreen"
+        android:checkedButton="@+id/rb_so">
+
+        <RadioButton
+            android:id="@+id/rb_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/configuracio"
+            android:checked="false"
+            android:text="Opcions de Color" />
+
+        <RadioButton
+            android:id="@+id/rb_lletra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/configuracio"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="-50dp"
+            android:checked="false"
+            android:text="Opcions de lletra" />
+
+    </RadioGroup>
+    <!--TAMANY DE LA LLETRA -->
+
+
+    <TextView
+        android:id="@+id/id_tamany"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rb_color"
+        android:layout_marginLeft="20dp"
+        android:text="Tamany de la lletra"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        tools:ignore="NotSibling" />
+
+    <RadioGroup
+        android:id="@+id/rg_opcions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_tamany"
+        android:layout_marginLeft="20dp"
+        android:background="@color/colorGreen"
+        android:checkedButton="@+id/rb_so"
+        android:visibility="invisible">
+
+        <RadioButton
+            android:id="@+id/rb_moltPetit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Molt petit"/>
+
+        <RadioButton
+            android:id="@+id/rb_petit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Petit" />
+
+        <RadioButton
+            android:id="@+id/rb_mitja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mitja" />
+
+        <RadioButton
+            android:id="@+id/rb_gran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gran" />
+
+        <RadioButton
+            android:id="@+id/rb_moltGran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Molt gran" />
+
+    </RadioGroup>
+
+
+    <!--COLOR LLETRA -->
+    <TextView
+        android:id="@+id/id_colorLLetra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rb_color"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="65dp"
+        android:text="Color lletra:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        tools:ignore="NotSibling" />
+    <RadioGroup
+        android:id="@+id/rg_colorLLetra"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_colorLLetra"
+        android:background="@color/colorGreen"
+        android:checkedButton="@+id/rb_so"
+        android:visibility="invisible">
+
+        <RadioButton
+            android:id="@+id/rb_varmell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Varmell" />
+
+        <RadioButton
+            android:id="@+id/rb_verd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Verd" />
+
+        <RadioButton
+            android:id="@+id/rb_blau"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Blau" />
+        <RadioButton
+            android:id="@+id/rb_blanc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Blanc" />
+
+        <RadioButton
+            android:id="@+id/rb_negre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Negre" />
+
+    </RadioGroup>
+
+
+    <!--COLOR FONS  -->
+    <TextView
+        android:id="@+id/id_colorFons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rg_colorLLetra"
+        android:layout_marginLeft="20dp"
+        android:text="Color del fons de la lletra:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+    <RadioGroup
+        android:id="@+id/rg_colorFons"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_colorFons"
+        android:background="@color/colorGreen"
+        android:checkedButton="@+id/rb_so"
+        android:visibility="invisible">
+
+        <RadioButton
+            android:id="@+id/rb_varmellFons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Varmell" />
+
+        <RadioButton
+            android:id="@+id/rb_verdFons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Verd" />
+
+        <RadioButton
+            android:id="@+id/rb_blauFons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Blau" />
+        <RadioButton
+            android:id="@+id/rb_blancFons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Blanc" />
+
+        <RadioButton
+            android:id="@+id/rb_negreFons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Negre" />
+
+    </RadioGroup>
+
+
+    <!--COLOR DEL FONS DE LA LLETRA -->
+    <TextView
+        android:id="@+id/id_colorFonsLletra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rb_lletra"
+        android:layout_marginLeft="200dp"
+        android:text="Color del fons:"
+        android:layout_marginTop="65dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        tools:ignore="NotSibling" />
+    <RadioGroup
+        android:id="@+id/rg_colorFonsLletra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_colorFonsLletra"
+        android:layout_marginLeft="200dp"
+        android:background="@color/colorGreen"
+        android:checkedButton="@+id/rb_so"
+        android:visibility="invisible">
+
+        <RadioButton
+            android:id="@+id/rb_varmellFonsLletra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Varmell" />
+
+        <RadioButton
+            android:id="@+id/rb_verdFonsLletra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Verd" />
+
+        <RadioButton
+            android:id="@+id/rb_blauFonsLletra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Blau" />
+        <RadioButton
+            android:id="@+id/rb_blancFonsLletra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Blanc" />
+
+        <RadioButton
+            android:id="@+id/rb_negreFonsLletra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Negre" />
+
+    </RadioGroup>
+
+
+    <!--Boto Aplicar-->
+    <Button
+        android:id="@+id/btn_aplicar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/configuracio"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginRight="100dp"
+        android:text="Aplicar" />
+
+
+
+</RelativeLayout>
